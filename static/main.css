@@ -1,0 +1,22 @@
+ body {font-family: Giveny; background-color: #01FF70; padding: 20px}
+.container {padding: 300px 0;background-image: url("book-2572013_1920.jpg");background-size: cover;}
+.menu {
+overflow: hidden;s
+width: 40%
+text-align: center;
+border: 20px navy;
+border-style: ridge}
+ul {list-style: none; margin: 0; padding: 0;}
+li  {
+font-size: 125%; font-style: bold;
+color: #f2f2f2;
+float: left;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+ font-family: Times New Roman; 
+	}
+.menu li:hover {background-color: #ddd;
+color: black;}
+
+.header {background-image: url("Euler_s_infinity_sign.svg") ; text-align: center}

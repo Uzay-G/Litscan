@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content%}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style type="text/css">
+	.sass {margin-left: 50px; margin-top: -20px; margin-bottom: 40px}
+	#resu {font-size: 18px; font-family: 'Montserrat'; margin-left: 50px;}
+	form button {width: 3%; padding: 10px; background: white; cursor: pointer; box-shadow: 1px 1px 2.5px grey; right: 100px; float:left; display:inline; margin-top: 24px;}
+	input {height: 33px; float:left; display:inline; margin-top: 24px;
+		   border-top: 2px inset silver; border-left: 2px inset silver; border-bottom: 2px outset silver;border-right: 2px outset silver; font-family: "Quicksand"; font-size: 17px; width: 250px;
+		   box-shadow: 0px 1px 2.5px grey;  
+				   }
+	#desc a {color: navy;}
+	#desc {margin-left: 50px;}
+</style>
+<div class="sass">
+<form  method="post" id="myform" action="{{url_for('results')}}" novalidate onsubmit="return empty()" >
+    		<input type="text" name="phrase" value=" {{ formdata }}"></p>
+    		<span class="but">
+    		<button type="submit"><i class="fa fa-search"></i></button>
+    		<br>
+    		<br>
+    		<!-- <img id="copper-loader" src="{{url_for('static', filename='copper-loader.gif')}}"> -->
+    	</div>
+    	    	</form>
+
+<!--<h3 id="titl">Your phrase: {{ formdata }}</h2>
+<h3 id="zelz">{{ rty }}</h2>
+<br> -->
+    <script type="text/javascript">
+    	function empty() {
+    var x;
+    x = document.getElementById("inp").value;
+    if (x == "" || (isNaN(x) == false)) {
+        return false;
+    };
+}
+    </script>
+	{% for key, value in listings.items() %}
+		<!-- <img id="turing" src="{{url_for('static', filename='Line_3.svg')}}"> --> <a href="" id="resu">{{ key }}</a><br><p id="desc">{{ value }}</p><br>
+		{% endfor %}
+{% endblock %}

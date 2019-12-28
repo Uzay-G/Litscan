@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content%}
+<style type="text/css">
+.begin {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#intros {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Quicksand", sans-serif;
+	font-size: 21px;
+}
+.lists li {list-style-type: none;  
+	border: 1px solid gray;
+	text-align: left;
+	padding: 3%;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+}
+.lists {margin-top: 8%; background-color: white; width: 80%; margin-left: auto; margin-right: auto;}
+#firs {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	margin-top: 10%;
+	font-size: 28px;
+}
+.status {margin-left: 94%; width: 5%; height: 5%; margin-top: -50px;	
+}
+</style>
+<div class="begin">
+<p id="firs">Which techniques are supported?</p>
+<br>
+<p id="intros">Unfortunately, the algorithm cannot yet track every literary technique. This page shows you which stylistic devices are detectable and which ones are not available.</p>
+<br>
+<img src="{{url_for('static', filename='line1.png')}}" style="margin-right: auto; margin-left: auto; display: block;">
+<br>
+</div>
+<div class="lists">
+	<ul>
+        <li>Alliteration</li><img src="{{url_for('static', filename='yes.png')}}" class="status">
+		<li>Assonance</li><img src="{{url_for('static', filename='yes.png')}}" class="status">
+		<li>Onomatopeia</li><img src="{{url_for('static', filename='yes.png')}}" class="status">
+		<li>Palindrome</li><img src="{{url_for('static', filename='yes.png')}}" class="status">
+		<li>Repitition</li><img src="{{url_for('static', filename='yes.png')}}" class="status">
+		<li>Sibilance</li><img src="{{url_for('static', filename='yes.png')}}" class="status">
+	</ul>
+</div>
+{% endblock %}

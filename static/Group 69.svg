@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="262" height="74" viewBox="0 0 262 74">
+  <defs>
+    <filter id="Litscan" x="64" y="0" width="198" height="74" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_69" data-name="Group 69" transform="translate(-270 -27)">
+    <g transform="matrix(1, 0, 0, 1, 270, 27)" filter="url(#Litscan)">
+      <text id="Litscan-2" data-name="Litscan" transform="translate(73 50)" font-size="56" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700"><tspan x="0" y="0">Litscan</tspan></text>
+    </g>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(270 34)" fill="#bf45af" stroke="#707070" stroke-width="1">
+      <rect width="55" height="52" rx="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="54" height="51" rx="2.5" fill="none"/>
+    </g>
+    <text id="L" transform="translate(283 76)" font-size="56" font-family="ProximaNova-Bold, Proxima Nova" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+  </g>
+</svg>

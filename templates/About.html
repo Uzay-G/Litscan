@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content%}
+<link rel="stylesheet" type="text/css" href="animate.css" />
+<script src="viewportchecker.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- We also need jQuery -->
+<style type="text/css">
+	body {
+		background-color:  #ccffff;
+
+	}
+	h1 {font-family: "Quicksand"; font-size: 35px; text-align: center; padding: 40px;}
+	.about {margin-left: auto;margin-right: auto; margin-top: -140px; width: 70%; background-color: white; margin-bottom: 5%; padding: 5%;}
+	h3 {font-family: "Quicksand", sans-serif; font-size: 27px; text-shadow: 0.5px 0.5px 0.25px black; padding: 30px; margin-left: -10px}
+	p {font-size: 18px;}
+.entry {
+     height: 400px; background-color: #9BDDFF; width: 100%; display: block;}
+.texts {width: 63%; font-family: "Quicksand", sans-serif; padding: 7%; border: 0.8px solid silver; border-radius: 10px; margin-left: auto; margin-right: auto;}
+.hidden {opacity: 0;}
+.visible {opacity: 1;}
+.end { background-color: white; margin-left: auto; margin-right: auto;}
+#bugs { width: 30%; height: 30%; margin-bottom: -2%; margin-left: -0.2%; margin-right: 5.5%}
+#search {
+	font-size: 22px;
+	padding: 1.22%;
+	font-family: "Quicksand", sans-serif;
+	margin-left: 24.5%;
+	margin-top: -5%;
+	background-color: #3a5eb7;
+	color: white;
+	margin-right: -0.2%;
+	border: none;
+}
+.forms {display: inline;}
+
+</style>
+
+<div class="entry">
+</div>
+<div class="about">
+<div class="texts">
+<h1>Project Description</h1> 
+<h3>The Process</h3>
+<p>This tool analyses a phrase entered by the user and returns with the list of
+literary techniques his phrase contained. This facilitates the detection of techniques in literary passages or phrases.</p><br>
+<img style="width: 85%; height: 85%; margin-bottom: 7px;" src="{{url_for('static', filename='Ex1.png')}}">
+<p>In this example from the novel the "Sun Also Rises" by Ernest Hemingway, <a target="_blank" href="https://www.dictionary.com/browse/simile">a simile</a> is used to explicitly compare the cafe and the image of a battleship. This tool does not yet support all techniques and I am trying to enhance its detection and accuracy. Check <a href="">here</a> to see which techniques can be scanned.</p>
+<br>
+<h3>Warning</h3>
+<p>I cannot devote much time to this project and there are still problems and techniques that cannot be detected. If you encounter a bug, please report it down below.</p>
+<h3>Thank You</h3>
+<p>I hope you find this tool useful. I created this project to simply help people and I wish it managed to do that for you.</p>
+</div>
+<br>
+<div class="end">
+<br><br>
+<form class="forms" action="{{url_for('renders')}}">
+<button id="search" type="submit" act>Search a phrase</button>
+<form class="forms"action="">
+<input id="bugs" type="image" src="{{url_for('static', filename='bugrep3.png')}}"></button>
+</form>
+</div class="end">
+</div class="about">
+{% endblock %}

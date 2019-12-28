@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content%}
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+				<style type="text/css">
+				h2 {text-align: center; font-family: 'Quicksand'}
+				#image1 {display: block; width: 17%; margin-left: auto; margin-right: auto; ; height: 17%; margin-top: 150px;margin-bottom: -12px}
+				.rawinput input {height: 33px; 
+					border-top: 2px inset silver; border-left: 2px inset silver; border-bottom: 2px outset silver;
+				 left: -15px; font-family: "Quicksand"; font-size: 17px; width: 500px; display: block; margin-left: 32%;
+				  box-shadow: 0px 1px 2.5px grey; margin-top: 7px; display: inline; 
+				   }
+				.rawinput { position: absolute; width: 100%;}
+				form button {width: 3%; padding: 10px; background: white; border-left: none; cursor: pointer; display: inline; box-shadow: 1px 1px 2.5px grey; bottom-border: none; margin-left: 875px; margin-top:-55.5px;  border-left: 2px inset silver; float: left; height: 3%}
+				form label{ font-family: "Quicksand"; font-size: 19px; margin-left: 450px; margin-top: 10px; font-style: bold;}
+#particles-js {
+			height: 100vh;
+			background: #f4f6f8;
+			background-size: cover;
+			background-position: center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	</header>
+    <div class="rawinput">
+    		<img id="image1" src="{{url_for('static', filename='s.png')}}">
+    	<form  method="post" id="myform" action="{{url_for('results')}}" novalidate onsubmit="return empty()">
+    		<br>
+    		<p><label for="phrase">Enter a phrase that will be scanned for literary devices</label>
+    		<br>
+    		<br>
+    		<input id="inp" type="text" name="phrase"></p>
+    		<button type="submit"><i class="fa fa-search"></i></button>
+    		<br>
+    		<br>
+    		<!-- <img id="copper-loader" src="{{url_for('static', filename='copper-loader.gif')}}"> -->
+    	</div>
+    	    	</form>
+    <script type="text/javascript">
+    	function empty() {
+    var x;
+    x = document.getElementById("inp").value;
+    if (x == "" || (isNaN(x) == false)) {
+        return false;
+    };
+}
+    </script>
+    <div id="particles-js"></div>
+	<script type="text/javascript" src="{{url_for('static', filename='particles.js')}}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='appspecial.js')}}"></script>
+{% endblock %}

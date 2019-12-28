@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+		 <meta charset="UTF-8">
+		<title>Litscan</title>
+		<style>
+		body {margin:0;
+			font-weight: 400
+			}
+		.logo { margin-left: -15px; padding: 10px 0; width: 13%; height: 13%; margin-bottom: -5px; margin-top: -5px;}
+		nav {float:right;}
+		.menu {width: 80%; margin: 0 auto; font-family: "Montserrat", sans-serif;}
+		/*styles the section that contains the navigation bar */
+		header {background-color: #00303F; width: 100%; }
+		header {
+
+			content: '';
+			display: table;
+			clear: both;
+		}
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			margin-top: 5px
+		}
+		nav li {
+			display: inline-block;
+			margin-left: 70px;
+			padding-top: 15px;
+			font-size: 15.5px;
+			position: relative;
+		}
+		nav a {
+			color:white;
+			text-decoration: none;
+			text-transform:uppercase;
+		}
+		/* colours link on hover  */
+		nav a:hover {
+			color: #98F5FF ;
+		}
+		/* Creates the line effect above the links but hides it but hides it */
+		nav a::before {
+			content: '';
+			content-color: azure;
+			display: block;
+			height: 8px;
+			background-color: white;
+
+			position: absolute;
+			top: -6px;
+			width: 0%;
+			height: 15%;
+			transition: all ease-in-out 200ms;
+		}
+		/* Reveals the line effect when the links are hovered upon*/
+		nav a:hover::before {
+			width: 100%;
+
+		}
+		.outer {
+			left: 0;
+			right: 0;
+			position: fixed;
+			margin-left:85%;
+		}
+	</style>
+</head>
+	<header>
+		<div class="menu">
+			<img src="{{url_for('static', filename='Group_721.png')}}"  class="logo" alt="logo"  >	
+
+			<nav>
+				<ul> 
+		                                   
+		                                  	<li><a href="{{url_for('renders')}}">Search</a></li>
+		                                  	<li><a href="{{url_for('techniques')}}">Supported Techniques</a></li>
+		                                  	<li><a href="{{url_for('about')}}">About</a></li>
+		                                  </ul>
+		                              </nav>
+		                          </div>
+		                      </header>
+
+	</script>
+
+</div>
+<body>
+	<!--
+	<div class="outer">
+		<img src="{{url_for('static', filename='bugrep3.png')}}" style="width: 100%; height: 100%;" onclick="">
+	</div> -->
+	{%block content%}
+	{%endblock%}
+</body>
+</html>
