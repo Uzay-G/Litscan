@@ -23,19 +23,28 @@
     	</div>
     	    	</form>
 
-<!--<h3 id="titl">Your phrase: {{ formdata }}</h2>
-<h3 id="zelz">{{ rty }}</h2>
-<br> -->
-    <script type="text/javascript">
-    	function empty() {
-    var x;
-    x = document.getElementById("inp").value;
-    if (x == "" || (isNaN(x) == false)) {
-        return false;
-    };
-}
-    </script>
-	{% for key, value in listings.items() %}
-		<!-- <img id="turing" src="{{url_for('static', filename='Line_3.svg')}}"> --> <a href="" id="resu">{{ key }}</a><br><p id="desc">{{ value }}</p><br>
+<h3 id="titl">Your phrase: {{ formdata }}</h2>
+<h3 id="overview">{{ overview }}</h2>
+<br>
+{% for key, value in listings.items() %}
+	{% if value["items"] %}
+		<h3>{{ key }} </h3>
+		<p> {{ value["desc"] }} </p>
+		{% for technique in value["items"] %}
+			<p>{{ technique }}</p>
 		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+
+<script type="text/javascript">
+	function empty() {
+	    let x;
+    	x = document.getElementById("inp").value;
+    	if (x == "" || (isNaN(x) == false)) {
+        	return false;
+    	};
+	}
+</script>
 {% endblock %}
+
